@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Text.RegularExpressions;
 
 public class Slot : MonoBehaviour
@@ -20,10 +21,12 @@ public class Slot : MonoBehaviour
         var skullData = skullInstance.dicSkullDataTable[id];
         skullName = skullInstance.dicSkullStringDataTable[skullData.base_imageName].name;
         var staticSkillInstance = skullInstance.dicStaticSkillDataTable[skullData.base_staticSkill];
+        transform.GetComponent<Image>().sprite = Resources.Load<Sprite>($"SkulImage/{skullInstance.dicSkullResouseTable[skullData.base_imageName].imageName}");
+        //Debug.Log(skullInstance.dicSkullResouseTable[skullData.base_imageName]);
         for(int i = 0; i < staticSkillInstance.passiveAffectArr.Length; i++)
         {
             int placeholderCount = GetPlaceholderCount(skullInstance.dicPassiveAffectDataTable[staticSkillInstance.passiveAffectArr[i]].desc);
-
+            
             // Extract required integers from the 2D array
             object[] intValues = new object[placeholderCount];
             
@@ -45,10 +48,12 @@ public class Slot : MonoBehaviour
             }
             var stringFormatting = string.Format($"{skullInstance.dicPassiveAffectDataTable[staticSkillInstance.passiveAffectArr[i]].desc}",intValues);
             passiveSkillDesc += (stringFormatting + "\n");
-            //Debug.Log(stringFormatting);
+            
         }
-        Debug.Log(passiveSkillDesc);
+        //Debug.Log(passiveSkillDesc);
     }
+
+
     private int GetPlaceholderCount(string template)
     {
         return Regex.Matches(template, @"\{\d+\}").Count;

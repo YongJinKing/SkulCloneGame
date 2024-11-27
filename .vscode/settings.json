@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Skul_The_Hero_Slayer.sln"
+    "dotnet.defaultSolution": "SkulCloneGame.sln"
 }

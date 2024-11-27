@@ -662,6 +662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 753bfca70acda884cb10075b9547417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slotGrid: {fileID: 773246565}
+  slot: {fileID: 466967971994006729, guid: fd7d2570373d811408016f02bcc3d7b0, type: 3}
 --- !u!4 &1252097184
 Transform:
   m_ObjectHideFlags: 0

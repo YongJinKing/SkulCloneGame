@@ -4,7 +4,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.Linq;
 
-public class SkullStaticDataManager : MonoBehaviour
+public class SkullStaticDataManager
 {
     private static SkullStaticDataManager instance;
     public Dictionary<int, PassiveAffect_DataTable> dicPassiveAffectDataTable;
@@ -19,7 +19,7 @@ public class SkullStaticDataManager : MonoBehaviour
             SkullStaticDataManager.instance = new SkullStaticDataManager();
         return SkullStaticDataManager.instance;
     }
-    public void LoadItemDatas()
+    public void LoadSkullDatas()
     {
         var Skull_PassiveAffect_DataTable = Resources.Load<TextAsset>("PassiveAffect_DataTable").text;
         var Skull_DataTable = Resources.Load<TextAsset>("Skull_DataTable").text;
@@ -30,13 +30,14 @@ public class SkullStaticDataManager : MonoBehaviour
         
         var arrSkull_PassiveAffect_DataTable = JsonConvert.DeserializeObject<PassiveAffect_DataTable[]>(Skull_PassiveAffect_DataTable);
         var arrSkull_DataTable = JsonConvert.DeserializeObject<Skull_DataTable[]>(Skull_DataTable);
+
         var arrSkull_ImageResources_DataTable = JsonConvert.DeserializeObject<Skull_ImageResources_DataTable[]>(Skull_ImageResources_DataTable);
         var arrSkull_String_DataTable = JsonConvert.DeserializeObject<Skull_String_DataTable[]>(Skull_String_DataTable);
         var arrSkull_StaticSkill_DataTable = JsonConvert.DeserializeObject<StaticSkill_DataTable[]>(Skull_StaticSkill_DataTable);
  
-        /* foreach(var data in arrItem_DataTables)
+        /* foreach(var data in arrSkull_DataTable)
         {
-            Debug.LogFormat("{0} ",data.ItemData_Index);
+            Debug.LogFormat("{0} ",data.skull_index);
         } */
         this.dicPassiveAffectDataTable = arrSkull_PassiveAffect_DataTable.ToDictionary(x => x.affect_index);
         this.dicSkullDataTable = arrSkull_DataTable.ToDictionary(x => x.skull_index);

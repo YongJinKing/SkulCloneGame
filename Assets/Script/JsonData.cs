@@ -8,7 +8,7 @@ public struct Skull_DataTable
     public int type;
     public int base_attackCycle;
     public int base_staticSkill;
-    public int base_activeSkillArr;
+    public int[] base_activeSkillArr;
     public int base_evolution;
     public int base_imageName;
       
@@ -34,6 +34,6 @@ public struct Skull_String_DataTable
 public struct StaticSkill_DataTable
 {
     public int staticSkill_index;
-    public int passiveAffectArr;
-    public int passiveAffectValueArr;
+    public int[] passiveAffectArr;
+    public int[][] passiveAffectValueArr;
 }

@@ -3,37 +3,36 @@
 public struct Skull_DataTable
 {
     public int skull_index;
-    public int rarity;
-    public int info;
-    public int type;
-    public int base_attackCycle;
-    public int base_staticSkill;
-    public int[] base_activeSkillArr;
-    public int base_evolution;
-    public int base_imageName;
-      
+    public int skull_rarity;
+    public int skull_info;
+    public int skull_type;
+    public int skull_attackCycle;
+    public int skull_staticSkill;
+    public int[] skull_activeSkillArr;
+    public int skull_evolution;
+    public int skull_imageName;
 }
-public struct PassiveAffect_DataTable
+public struct Skull_PassiveAffectTable
 {
-    public int affect_index;
-    public string affect_name;
-    public string desc;
+    public int skull_PassiveAffect_index;
+    public string skull_PassiveAffect_name;
+    public string skull_PassiveAffect_desc;
 }
 
-public struct Skull_ImageResources_DataTable
+public struct Skull_ImageResourcesTable
 {
     public int skull_imageResources_index;
-    public string imageName;
+    public string skull_imageResources_imageName;
 }
-public struct Skull_String_DataTable
+public struct Skull_StringTable
 {
-    public int skullString_index;
-    public string name;
+    public int skull_string_index;
+    public string skull_string_name;
 }
 
-public struct StaticSkill_DataTable
+public struct Skull_StaticSkillTable
 {
-    public int staticSkill_index;
-    public int[] passiveAffectArr;
-    public int[][] passiveAffectValueArr;
+    public int skull_staticSkill_index;
+    public int[] skull_passiveAffectArr;
+    public int[][] skull_passiveAffectValueArr;
 }

@@ -1,0 +1,42 @@
+[
+   {
+      "skull_string_index":100000,
+      "skull_string_name":"스켈레톤-창"
+   },
+   {
+      "skull_string_index":100001,
+      "skull_string_name":"웨어울프"
+   },
+   {
+      "skull_string_index":100002,
+      "skull_string_name":"좀도둑"
+   },
+   {
+      "skull_string_index":100003,
+      "skull_string_name":"돌원숭"
+   },
+   {
+      "skull_string_index":110000,
+      "skull_string_name":"스컬"
+   },
+   {
+      "skull_string_index":110001,
+      "skull_string_name":"스켈레톤-검"
+   },
+   {
+      "skull_string_index":110002,
+      "skull_string_name":"칼레온 신병"
+   },
+   {
+      "skull_string_index":120000,
+      "skull_string_name":"스켈레톤-방패"
+   },
+   {
+      "skull_string_index":120001,
+      "skull_string_name":"엔트 스컬"
+   },
+   {
+      "skull_string_index":120002,
+      "skull_string_name":"무덤지기"
+   }
+]

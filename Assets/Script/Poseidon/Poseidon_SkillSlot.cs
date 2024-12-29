@@ -7,22 +7,34 @@ public class Poseidon_SkillSlot : MonoBehaviour
 {
     #region variable
 
-    private Image image;
-    private Button button;
+    public int id{get; private set;}
+    public Sprite sprite{get; private set;}
 
+
+    
+    private bool isRigging;
+    private Transform riggingText;
+    
+    
     #endregion
 
-    private void Start() 
+    private void Awake()
     {
-        image = GetComponentInChildren<Image>();
-        button = GetComponentInChildren<Button>();
-    }
-    public void Init(int id)
-    {
-        var poseidonInstance = PoseidonSkillStaticDataManager.GetInstance();
-        poseidonInstance.LoadSkillDatas();
-        transform.GetChild(0).GetComponent<Image>().sprite = 
-        Resources.Load<Sprite>($"Image/Posaidon/{poseidonInstance.dicSkill_imageResourcesTable[poseidonInstance.dicSkill_dataTable[id].skill_imageNameIdx].skill_imageResources_imageName}");
+        riggingText = transform.GetChild(1);
+        
         
     }
+    public void Init(int id ,Sprite sprite)
+    { 
+        this.id = id;
+        this.sprite = sprite;
+        transform.GetChild(0).GetComponent<Image>().sprite = sprite;
+
+    }
+    public void riggingStatus()
+    {
+        isRigging = !isRigging;
+        riggingText.gameObject.SetActive(isRigging);  
+    }
+   
 }

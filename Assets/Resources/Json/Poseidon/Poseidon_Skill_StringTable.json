@@ -1,0 +1,122 @@
+[
+  {
+    "string_index": 100000,
+    "skill_name": "창던지기",
+    "skill_desc": "여러 개의 창을 발사"
+  },
+  {
+    "string_index": 100001,
+    "skill_name": "헤이스트",
+    "skill_desc": "공격속도와 이동속도가 증가"
+  },
+  {
+    "string_index": 100002,
+    "skill_name": "돌진",
+    "skill_desc": "빠른 속도로 돌진"
+  },
+  {
+    "string_index": 100003,
+    "skill_name": "파괴 상어",
+    "skill_desc": "강한 공격을 하는 상어"
+  },
+  {
+    "string_index": 110000,
+    "skill_name": "파도",
+    "skill_desc": "몬스터를 밀어내는 파도 소환"
+  },
+  {
+    "string_index": 110001,
+    "skill_name": "웨폰 마스터리",
+    "skill_desc": "기본 공격 강화"
+  },
+  {
+    "string_index": 110002,
+    "skill_name": "토네이도",
+    "skill_desc": "제자리에서 다단히트"
+  },
+  {
+    "string_index": 110003,
+    "skill_name": "톱 상어",
+    "skill_desc": "자동 유도 공격"
+  },
+  {
+    "string_index": 120000,
+    "skill_name": "아이스볼",
+    "skill_desc": "몬스터에 닿으면 빙결"
+  },
+  {
+    "string_index": 120001,
+    "skill_name": "워터 슬래시",
+    "skill_desc": "기본 공격 시 일정확률로 워터 슬래시 발사"
+  },
+  {
+    "string_index": 120002,
+    "skill_name": "붐피쉬",
+    "skill_desc": "여러 마리의 폭발하는 붐피쉬 발사"
+  },
+  {
+    "string_index": 120003,
+    "skill_name": "먹물 문어",
+    "skill_desc": "넓은 범위의 먹물 발사"
+  },
+  {
+    "string_index": 130000,
+    "skill_name": "회전창술",
+    "skill_desc": "창을 회전하며 여러 번 공격"
+  },
+  {
+    "string_index": 130001,
+    "skill_name": "버블버블",
+    "skill_desc": "몬스터 처치 시 일정확률로 구슬 드랍"
+  },
+  {
+    "string_index": 130002,
+    "skill_name": "헝그리샤크",
+    "skill_desc": "일정 범위의 몬스터를 끌어당김"
+  },
+  {
+    "string_index": 130003,
+    "skill_name": "가시 성게",
+    "skill_desc": "플레이어를 따라다니며 가시발사"
+  },
+  {
+    "string_index": 140000,
+    "skill_name": "분신술",
+    "skill_desc": "몬스터를 향해 분신술 생성"
+  },
+  {
+    "string_index": 140001,
+    "skill_name": "드랍률 증가",
+    "skill_desc": "장비 드랍률이 증가합니다"
+  },
+  {
+    "string_index": 140002,
+    "skill_name": "블리자드",
+    "skill_desc": "여러 개의 얼음 결정이 떨어진다"
+  },
+  {
+    "string_index": 140003,
+    "skill_name": "전기 뱅장어",
+    "skill_desc": "광범위 공격을 하는 뱀장어"
+  },
+  {
+    "string_index": 150000,
+    "skill_name": "포세이돈의 분노",
+    "skill_desc": "포세이돈의 휘두르기 공격"
+  },
+  {
+    "string_index": 150001,
+    "skill_name": "스킬 마스터리",
+    "skill_desc": "쿨타임 감소와 소환수 데미지 증가"
+  },
+  {
+    "string_index": 150002,
+    "skill_name": "물기둥",
+    "skill_desc": "거대한 물기둥 생성"
+  },
+  {
+    "string_index": 150003,
+    "skill_name": "수룡",
+    "skill_desc": "브래스를 내뿜는 수룡"
+  }
+]

@@ -67,5 +67,11 @@ public struct Poseidon_Skill_ImageResourcesTable
     public int skill_imageResources_index;
     public string skill_imageResources_imageName;
 }
+public struct Poseidon_Skill_StringTable
+{
+    public int string_index;
+    public string skill_name;
+    public string skill_desc;
+}
 
 #endregion

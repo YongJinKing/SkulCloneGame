@@ -1,0 +1,42 @@
+[
+  {
+    "skull_imageResources_index": 100000,
+    "imageName": "image_skeleton_pike"
+  },
+  {
+    "skull_imageResources_index": 100001,
+    "imageName": "image_wearWolf"
+  },
+  {
+    "skull_imageResources_index": 100002,
+    "imageName": "image_pettyThief"
+  },
+  {
+    "skull_imageResources_index": 100003,
+    "imageName": "image_stoneMonkey"
+  },
+  {
+    "skull_imageResources_index": 110000,
+    "imageName": "image_skul"
+  },
+  {
+    "skull_imageResources_index": 110001,
+    "imageName": "image_skeleton_sword"
+  },
+  {
+    "skull_imageResources_index": 110002,
+    "imageName": "image_caleonRecruit"
+  },
+  {
+    "skull_imageResources_index": 120000,
+    "imageName": "image_skeleton_shield"
+  },
+  {
+    "skull_imageResources_index": 120001,
+    "imageName": "image_entSkull"
+  },
+  {
+    "skull_imageResources_index": 120002,
+    "imageName": "image_graveDigger"
+  }
+]

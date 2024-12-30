@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -9,6 +10,8 @@ public class Poseidon_Preset : MonoBehaviour
     [SerializeField] private Poseidon_SkillExplain poseidon_SkillExplain;
     private Transform presetSkillList;
     private Poseidon_PresetSlot[] poseidon_PresetSlot;
+    private Button[] presetsBtn;
+    private int selectedSkillId;
     private bool riggingCheck;
     Coroutine onRiggingSkillCoroutine;
     
@@ -17,37 +20,43 @@ public class Poseidon_Preset : MonoBehaviour
     {
         presetSkillList = transform.GetChild(1);
         poseidon_PresetSlot = presetSkillList.GetComponentsInChildren<Poseidon_PresetSlot>();
-        poseidon_SkillExplain.OnRiggingSkillAct += OnRiggingSkill;
+
+
+        presetsBtn = GetComponentsInChildren<Button>();
+        for(int i = 0; i < presetsBtn.Length; i++)
+        {
+            int index = i;
+            presetsBtn[index].onClick.AddListener(() => PresetsBtnActInSkillExplain(index));
+        }
+        poseidon_SkillExplain.OnRiggingSkillAct += OnRiggingSkill_SkillExplain;
     }
 
 
     
 
-    private void OnRiggingSkill(object sender, Poseidon_SkillExplain.OnRiggingSkillActEventArgs e)
+    private void OnRiggingSkill_SkillExplain(object sender, Poseidon_SkillExplain.OnRiggingSkillActEventArgs e)
     {
+        selectedSkillId = e.riggingSkillId;
         riggingCheck = e.isRigging;
-        if(e.isRigging)
+        RiggingSkillCheck();
+        
+    }
+    private void RiggingSkillCheck()
+    {
+        if(riggingCheck)
         {
             if(onRiggingSkillCoroutine == null)
             {
-                onRiggingSkillCoroutine = StartCoroutine(CanRiggingSkill());
+                onRiggingSkillCoroutine = StartCoroutine(CorRiggingSkill());
             }
         }
         else
         {
-            if(onRiggingSkillCoroutine != null)
-            {
-                StopCoroutine(CanRiggingSkill());
-                onRiggingSkillCoroutine = null;
-                for(int i = 0; i < presetSkillList.childCount; i++)
-                {
-                    poseidon_PresetSlot[i].ImageClear();
-                }
-            }
-            
+            PresetInit();
         }
     }
-    private IEnumerator CanRiggingSkill()
+    
+    private IEnumerator CorRiggingSkill()
     {
         while(riggingCheck)
         {
@@ -60,5 +69,42 @@ public class Poseidon_Preset : MonoBehaviour
         yield return null;
         
     }
+    private void PresetsBtnActInSkillExplain(int index)//
+    {
+        if(riggingCheck)
+        {
+            PresetIdCheck(selectedSkillId);
+            presetSkillList.GetChild(index).GetComponent<Poseidon_PresetSlot>().RiggngSkillInPresetSlot(selectedSkillId);
+            riggingCheck = false;
+        }
+    }
+    private void PresetIdCheck(int id)
+    {
+        for(int i = 0; i < presetSkillList.childCount; i++)
+        {
+            if(presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().id == id)
+            {
+                presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().RiggngSkillInPresetSlot(0);
+                PresetInit();
+                break;
+            }
+        }
+        
+    }
 
+    private void PresetInit()
+    {
+        if(onRiggingSkillCoroutine != null)
+        {
+            StopCoroutine(CorRiggingSkill());
+            onRiggingSkillCoroutine = null;
+            for(int i = 0; i < presetSkillList.childCount; i++)
+            {
+                poseidon_PresetSlot[i].ImageClear();
+                Debug.Log("클리어");
+            }
+        }
+        
+        
+    }
 }

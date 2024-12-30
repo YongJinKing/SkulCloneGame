@@ -15,14 +15,12 @@ public class Poseidon_SkillSlot : MonoBehaviour
     private bool isRigging;
     private Transform riggingText;
     
-    
     #endregion
 
     private void Awake()
     {
+       
         riggingText = transform.GetChild(1);
-        
-        
     }
     public void Init(int id ,Sprite sprite)
     { 
@@ -36,5 +34,4 @@ public class Poseidon_SkillSlot : MonoBehaviour
         isRigging = !isRigging;
         riggingText.gameObject.SetActive(isRigging);  
     }
-   
 }

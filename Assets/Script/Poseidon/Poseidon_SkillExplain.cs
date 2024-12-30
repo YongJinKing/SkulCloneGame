@@ -21,14 +21,16 @@ public class Poseidon_SkillExplain : MonoBehaviour
 
     public class OnRiggingSkillActEventArgs : EventArgs
     {
+        public int riggingSkillId;
         public bool isRigging;
+
     }
     public event EventHandler<OnRiggingSkillActEventArgs> OnRiggingSkillAct;
 
     private void Start() 
     {
         poseidon_skillList = poseidon_SkillList_data.transform.GetComponent<Poseidon_SkillList>();
-        poseidon_skillList.OnBtnAct += SkillList_OnChanged;
+        poseidon_skillList.OnSkillListBtnAct += SkillList_OnChanged;
 
         image = transform.GetChild(0).GetComponent<Image>();
         skillName = transform.GetChild(1).GetComponent<TMP_Text>();
@@ -42,15 +44,16 @@ public class Poseidon_SkillExplain : MonoBehaviour
     }
 
 
-    private void SkillList_OnChanged(object sender, Poseidon_SkillList.OnBtnActEventArgs e)
+    private void SkillList_OnChanged(object sender, Poseidon_SkillList.OnSkillListBtnActEventArgs e)
     {
-        var instance = poseidon_SkillList_data.GetChild(e.num).GetComponent<Poseidon_SkillSlot>();
+        var instance = poseidon_SkillList_data.GetChild(e.index).GetComponent<Poseidon_SkillSlot>();
         image.sprite = instance.sprite;
         selectedSkillId = instance.id;
         isRigging = false;
         ChangeRiggingBtnText();
         OnRiggingSkillAct?.Invoke(this, new OnRiggingSkillActEventArgs
         {
+            riggingSkillId = 0,
             isRigging = false,
         });
 
@@ -68,6 +71,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
             ChangeRiggingBtnText();
             OnRiggingSkillAct?.Invoke(this, new OnRiggingSkillActEventArgs
             {
+                riggingSkillId = selectedSkillId,
                 isRigging = this.isRigging,
             });
         }

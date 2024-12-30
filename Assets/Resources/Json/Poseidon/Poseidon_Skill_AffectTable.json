@@ -1,0 +1,167 @@
+[
+   {
+      "affect_index":100000,
+      "affect_name":"javelin1",
+      "affect_desc":"창 : 5개"
+   },
+   {
+      "affect_index":100010,
+      "affect_name":"heist1",
+      "affect_desc":"공격속도 : +10%"
+   },
+   {
+      "affect_index":100011,
+      "affect_name":"heist2",
+      "affect_desc":"이동속도 : +10%"
+   },
+   {
+      "affect_index":100020,
+      "affect_name":"rush1",
+      "affect_desc":"돌진 : 4회"
+   },
+   {
+      "affect_index":100030,
+      "affect_name":"destroyedShark1",
+      "affect_desc":"이동속도 : 느림"
+   },
+   {
+      "affect_index":100031,
+      "affect_name":"destroyedShark2",
+      "affect_desc":"이동속도 : 느림"
+   },
+   {
+      "affect_index":110000,
+      "affect_name":"wave1",
+      "affect_desc":""
+   },
+   {
+      "affect_index":110010,
+      "affect_name":"wephonMastery1",
+      "affect_desc":"기본 공격 데미지 50% 증사"
+   },
+   {
+      "affect_index":110020,
+      "affect_name":"tornado1",
+      "affect_desc":""
+   },
+   {
+      "affect_index":110030,
+      "affect_name":"sawShark1",
+      "affect_desc":"톱 상어 : 2"
+   },
+   {
+      "affect_index":120000,
+      "affect_name":"iceBall1",
+      "affect_desc":"크기 : 보통"
+   },
+   {
+      "affect_index":120001,
+      "affect_name":"iceBall2",
+      "affect_desc":"빙결 지속 시간 : 3초"
+   },
+   {
+      "affect_index":120010,
+      "affect_name":"waterSlash1",
+      "affect_desc":"크기 : 보통"
+   },
+   {
+      "affect_index":120011,
+      "affect_name":"waterSlash2",
+      "affect_desc":"발동 확률 : 20%"
+   },
+   {
+      "affect_index":120020,
+      "affect_name":"boomFish1",
+      "affect_desc":"붐 피쉬 : 5마리"
+   },
+   {
+      "affect_index":120021,
+      "affect_name":"boomFish2",
+      "affect_desc":"폭발 범위 : 보통"
+   },
+   {
+      "affect_index":120030,
+      "affect_name":"inkOctopus1",
+      "affect_desc":"먹물 범위 : 보통"
+   },
+   {
+      "affect_index":130000,
+      "affect_name":"spinningSpear1",
+      "affect_desc":""
+   },
+   {
+      "affect_index":130010,
+      "affect_name":"bubbleBubble1",
+      "affect_desc":"경험치 구슬 1개"
+   },
+   {
+      "affect_index":130011,
+      "affect_name":"bubbleBubble2",
+      "affect_desc":"골드 구슬 1개"
+   },
+   {
+      "affect_index":130012,
+      "affect_name":"bubbleBubble3",
+      "affect_desc":"확률 : 10%"
+   },
+   {
+      "affect_index":130020,
+      "affect_name":"hungryShark1",
+      "affect_desc":""
+   },
+   {
+      "affect_index":130030,
+      "affect_name":"seaUrchin1",
+      "affect_desc":"가시 발사 개수 : 6개"
+   },
+   {
+      "affect_index":140000,
+      "affect_name":"cloneTechnique1",
+      "affect_desc":"분신 10개, 공격 5회"
+   },
+   {
+      "affect_index":140010,
+      "affect_name":"increaseDropRate1",
+      "affect_desc":"장비 드랍률 20% 증가"
+   },
+   {
+      "affect_index":140011,
+      "affect_name":"increaseDropRate2",
+      "affect_desc":"진주 드랍률 : 0.5%"
+   },
+   {
+      "affect_index":140020,
+      "affect_name":"Blizzard1",
+      "affect_desc":"블리자드 : 60개"
+   },
+   {
+      "affect_index":140030,
+      "affect_name":"electricEel1",
+      "affect_desc":"광범위 공격을 하는 뱀장어"
+   },
+   {
+      "affect_index":150000,
+      "affect_name":"wrathOfPoseidon",
+      "affect_desc":"공격 횟수 : 2회"
+   },
+   {
+      "affect_index":150010,
+      "affect_name":"skillMastery1",
+      "affect_desc":"쿨타임 감소 : 10%"
+   },
+   {
+      "affect_index":150011,
+      "affect_name":"skillMastery2",
+      "affect_desc":"소환수 데미지 10% 증가"
+   },
+   {
+      "affect_index":150020,
+      "affect_name":"columnOfWater1",
+      "affect_desc":""
+   },
+   {
+      "affect_index":150030,
+      "affect_name":"waterDragon",
+      "affect_desc":"공격 횟수 : 1회"
+   }
+]

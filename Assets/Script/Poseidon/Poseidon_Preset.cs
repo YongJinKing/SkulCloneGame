@@ -13,6 +13,8 @@ public class Poseidon_Preset : MonoBehaviour
     private Button[] presetsBtn;
     private int selectedSkillId;
     private bool riggingCheck;
+    public event EventHandler OnPresetSlotBtnAct;
+    
     Coroutine onRiggingSkillCoroutine;
     
 
@@ -75,6 +77,7 @@ public class Poseidon_Preset : MonoBehaviour
         {
             PresetIdCheck(selectedSkillId);
             presetSkillList.GetChild(index).GetComponent<Poseidon_PresetSlot>().RiggngSkillInPresetSlot(selectedSkillId);
+            PresetInit();   
             riggingCheck = false;
         }
     }
@@ -98,10 +101,10 @@ public class Poseidon_Preset : MonoBehaviour
         {
             StopCoroutine(CorRiggingSkill());
             onRiggingSkillCoroutine = null;
+            OnPresetSlotBtnAct?.Invoke(this, EventArgs.Empty);
             for(int i = 0; i < presetSkillList.childCount; i++)
             {
                 poseidon_PresetSlot[i].ImageClear();
-                Debug.Log("클리어");
             }
         }
         

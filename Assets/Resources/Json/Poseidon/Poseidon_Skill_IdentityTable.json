@@ -33,7 +33,7 @@
       "identity_index":110001,
       "identity_name":"wephonMastery",
       "identity1_desc":"기본 공격 범위 50% 증가",
-      "identity2_desc":"기본 공격 데미지 150% 증가\\기본 공격 범위 20% 감소"
+      "identity2_desc":"기본 공격 데미지 150% 증가\n기본 공격 범위 20% 감소"
    },
    {
       "identity_index":110002,

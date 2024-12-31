@@ -52,9 +52,9 @@ public struct Poseidon_Skill_DataTable
     public float skill_duration;
     public int skill_hitValue;
     public int skill_rangeType;
-    public int skill_detailAffectIdx;
-    public int skill_identityAffect1Idx;
-    public int skill_identityAffect2Idx;
+    public int[] skill_detailAffectIdx;
+    public int skill_identityAffectIdx;
+    
     public int skill_arousalIdx;
     public int skill_imageNameIdx;
     
@@ -72,6 +72,20 @@ public struct Poseidon_Skill_StringTable
     public int string_index;
     public string skill_name;
     public string skill_desc;
+}
+
+public struct Poseidon_Skill_IdentityTable
+{
+    public int identity_index;
+    public string identity_name;
+    public string identity1_desc;
+    public string identity2_desc;
+}
+public struct Poseidon_Skill_AffectTable
+{
+    public int affect_index;
+    public string affect_name;
+    public string affect_desc;
 }
 
 #endregion

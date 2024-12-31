@@ -28,6 +28,11 @@ public class Poseidon_SkillExplain : MonoBehaviour
 
     }
     public event EventHandler<OnRiggingSkillActEventArgs> OnRiggingSkillAct;
+    public class OnSelectedkillActEventArgs : EventArgs
+    {
+        public int selectedSkillId;
+    }
+    public event EventHandler<OnSelectedkillActEventArgs> OnSelectedSkillAct;
 
     private void Start() 
     {
@@ -42,7 +47,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
         riggingBtn = transform.GetChild(3).GetComponent<Button>();
         riggingBtnText = transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>();
 
-        riggingBtn.onClick.AddListener(OnBtnAct);
+        riggingBtn.onClick.AddListener(OnRiggingBtnAct);
         
         poseidonInstance = PoseidonSkillStaticDataManager.GetInstance();
     }
@@ -60,6 +65,10 @@ public class Poseidon_SkillExplain : MonoBehaviour
             riggingSkillId = 0,
             isRigging = false,
         });
+        OnSelectedSkillAct?.Invoke(this, new OnSelectedkillActEventArgs
+        {
+            selectedSkillId = this.selectedSkillId
+        });
 
         poseidonInstance.LoadSkillDatas();
         skillName.text = poseidonInstance.dicSkill_stringTable[instance.id].skill_name;
@@ -67,7 +76,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
     }
 
 
-    private void OnBtnAct()
+    private void OnRiggingBtnAct()
     {
         if(selectedSkillId % 10000 != 1)
         {

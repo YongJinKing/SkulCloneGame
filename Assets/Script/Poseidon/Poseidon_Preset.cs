@@ -9,7 +9,7 @@ public class Poseidon_Preset : MonoBehaviour
 {
     [SerializeField] private Poseidon_SkillExplain poseidon_SkillExplain;
     private Transform presetSkillList;
-    private Poseidon_PresetSlot[] poseidon_PresetSlot;
+    private Poseidon_PresetSlot[] poseidon_presetSlot;
     private Button[] presetsBtn;
     private int selectedSkillId;
     private bool riggingCheck;
@@ -21,10 +21,10 @@ public class Poseidon_Preset : MonoBehaviour
     private void Start() 
     {
         presetSkillList = transform.GetChild(1);
-        poseidon_PresetSlot = presetSkillList.GetComponentsInChildren<Poseidon_PresetSlot>();
+        poseidon_presetSlot = presetSkillList.GetComponentsInChildren<Poseidon_PresetSlot>();//장착 스킬 클래스 참조
 
 
-        presetsBtn = GetComponentsInChildren<Button>();
+        presetsBtn = GetComponentsInChildren<Button>();//장착 스킬 버튼 할당
         for(int i = 0; i < presetsBtn.Length; i++)
         {
             int index = i;
@@ -64,7 +64,7 @@ public class Poseidon_Preset : MonoBehaviour
         {
             for(int i = 0; i < presetSkillList.childCount; i++)
             {
-                poseidon_PresetSlot[i].ImageChange();
+                poseidon_presetSlot[i].ImageChange();
             }
             yield return new WaitForSeconds(0.5f);
         }
@@ -104,7 +104,7 @@ public class Poseidon_Preset : MonoBehaviour
             OnPresetSlotBtnAct?.Invoke(this, EventArgs.Empty);
             for(int i = 0; i < presetSkillList.childCount; i++)
             {
-                poseidon_PresetSlot[i].ImageClear();
+                poseidon_presetSlot[i].ImageClear();
             }
         }
         

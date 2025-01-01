@@ -22,7 +22,7 @@ public class Poseidon_PresetSlot : MonoBehaviour
         isChange = !isChange;
         targetImage.gameObject.SetActive(isChange);
     }
-    public void ImageClear()
+    public void TargetImageClear()
     {
         targetImage.gameObject.SetActive(false);
     }

@@ -7,10 +7,13 @@ using UnityEngine.UI;
 public class Poseidon_SkillList : MonoBehaviour
 {
     [SerializeField] private Transform skillSlot;
+    [SerializeField] private Poseidon_Preset poseidon_Preset;
     
-    private Button[] slotsBtn;
     private PoseidonSkillStaticDataManager poseidonInstance;
-    
+    private Button[] slotsBtn;
+
+
+
     public class OnSkillListBtnActEventArgs : EventArgs
     {
         public int index;
@@ -20,14 +23,13 @@ public class Poseidon_SkillList : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        poseidonInstance  = PoseidonSkillStaticDataManager.GetInstance();  
+        poseidonInstance  = PoseidonSkillStaticDataManager.GetInstance();
+        poseidon_Preset.OnPresetSlotBtnAct += RiggingSkillCheck;
         Init();
     }
     private void Init()
     {
-        
         poseidonInstance.LoadSkillDatas();
-
         foreach(var data in poseidonInstance.dicSkill_dataTable)
         {
             var skillInstance = Instantiate(skillSlot,transform);
@@ -43,6 +45,20 @@ public class Poseidon_SkillList : MonoBehaviour
                 index = index
             }));
         }
+    }
+    private void RiggingSkillCheck(object sender, Poseidon_Preset.OnPresetSlotBtnActEventArgs e)
+    {
+        /* for(int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetChild(1).gameObject.SetActive(false);
+            for(int j = 0; j < e.riggingSkillList.Count; j++)
+            {
+                if(transform.GetChild(i).GetComponent<Poseidon_PresetSlot>().id == e.riggingSkillList[j])
+                {
+                    transform.GetChild(i).GetChild(1).gameObject.SetActive(true);
+                }
+            }
+        } */
     }
 
 

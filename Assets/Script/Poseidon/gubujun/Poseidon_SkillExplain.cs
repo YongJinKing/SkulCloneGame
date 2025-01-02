@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Poseidon_SkillExplain : MonoBehaviour
 {
     [SerializeField] private Transform poseidon_SkillList_data;
-    [SerializeField] private Poseidon_Preset poseidon_preset;
+    private Poseidon_Preset poseidon_preset;
     private Image image;
     private TMP_Text skillName;
     private TMP_Text skillDesc;
@@ -21,6 +21,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
     
     private PoseidonSkillStaticDataManager poseidonInstance;
 
+    #region Event
     public class OnRiggingSkillActEventArgs : EventArgs
     {
         public int riggingSkillId;
@@ -33,12 +34,15 @@ public class Poseidon_SkillExplain : MonoBehaviour
         public int selectedSkillId;
     }
     public event EventHandler<OnSelectedkillActEventArgs> OnSelectedSkillAct;
-
+    #endregion
     private void Start() 
     {
+        poseidon_preset = PoseidonMainBar.instance.skillPreset.GetComponent<Poseidon_Preset>();
+
+
         poseidon_skillList = poseidon_SkillList_data.transform.GetComponent<Poseidon_SkillList>();
-        poseidon_skillList.OnSkillListBtnAct += SkillList_OnChanged;
-        poseidon_preset.OnPresetSlotBtnAct += Poseidon_PresetSlotBtnAct;
+        poseidon_skillList.OnSkillListBtnAct += OnSkillListBtnAct_Poseidon_SkillList;
+        poseidon_preset.OnPresetSlotBtnAct += OnPresetSlotBtnAct_Poseidon_Preset;
 
         image = transform.GetChild(0).GetComponent<Image>();
         skillName = transform.GetChild(1).GetComponent<TMP_Text>();
@@ -53,13 +57,13 @@ public class Poseidon_SkillExplain : MonoBehaviour
     }
 
 
-    private void SkillList_OnChanged(object sender, Poseidon_SkillList.OnSkillListBtnActEventArgs e)//스킬리스트에서 선택한 스킬 바꾸기
+    private void OnSkillListBtnAct_Poseidon_SkillList(object sender, Poseidon_SkillList.OnSkillListBtnActEventArgs e)//스킬리스트에서 선택한 스킬 바꾸기
     {
         var instance = poseidon_SkillList_data.GetChild(e.index).GetComponent<Poseidon_SkillSlot>();
         image.sprite = instance.sprite;
         selectedSkillId = instance.id;
         isRigging = false;
-        ChangeRiggingBtnText();
+        SetRiggingBtnText();
         OnRiggingSkillAct?.Invoke(this, new OnRiggingSkillActEventArgs
         {
             riggingSkillId = 0,
@@ -81,7 +85,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
         if(selectedSkillId % 10000 != 1)
         {
             this.isRigging = !this.isRigging;
-            ChangeRiggingBtnText();
+            SetRiggingBtnText();
             OnRiggingSkillAct?.Invoke(this, new OnRiggingSkillActEventArgs
             {
                 riggingSkillId = selectedSkillId,
@@ -90,7 +94,7 @@ public class Poseidon_SkillExplain : MonoBehaviour
         }
         
     }
-    private void ChangeRiggingBtnText()
+    private void SetRiggingBtnText()
     {
         if(selectedSkillId % 10000 == 1)
         {
@@ -110,10 +114,10 @@ public class Poseidon_SkillExplain : MonoBehaviour
         
     }
 
-    private void Poseidon_PresetSlotBtnAct(object sender, EventArgs e)
+    private void OnPresetSlotBtnAct_Poseidon_Preset(object sender, EventArgs e)
     {
         this.isRigging = false;
-        ChangeRiggingBtnText();
+        SetRiggingBtnText();
     }
 
 }

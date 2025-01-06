@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Poseidon_Preset : MonoBehaviour
 {
     [SerializeField] private Poseidon_SkillExplain poseidon_SkillExplain;
-    [SerializeField] private Poseidon_Identity poseidon_Identity;
     private Transform presetSkillList;
     private Poseidon_PresetSlot[] poseidon_presetSlot;
     private Button[] presetsBtn;
@@ -18,6 +17,7 @@ public class Poseidon_Preset : MonoBehaviour
 
     public class OnPresetSlotBtnActEventArgs : EventArgs
     {
+        
         public List<int> riggingSkillList;
     }
     public event EventHandler<OnPresetSlotBtnActEventArgs> OnPresetSlotBtnAct;
@@ -39,7 +39,6 @@ public class Poseidon_Preset : MonoBehaviour
             presetsBtn[index].onClick.AddListener(() => PresetsBtnActInSkillExplain(index));
         }
         poseidon_SkillExplain.OnRiggingSkillAct += OnRiggingSkill_SkillExplain;
-        poseidon_Identity.OnIdentityBtnAct += SetRiggingSkillIdentity_Poseidon_Identity;
     }
 
 
@@ -52,21 +51,8 @@ public class Poseidon_Preset : MonoBehaviour
         RiggingSkillCheck();
         
     }
-    private void SetRiggingSkillIdentity_Poseidon_Identity(object sender, Poseidon_Identity.OnIdentityBtnActEventArgs e)
-    {
-        for(int i = 0; i < presetSkillList.childCount; i++)
-        {
-            if(selectedSkillId == presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().id && selectedSkillId != 0)
-            {   
-                presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().SetRiggingSkillIdentity(e.index);
-                break;
-            }
-        }
-        
-    }
     private void RiggingSkillCheck()
     {
-        PresetTargetImageInit();
         if(riggingCheck)
         {
             if(onRiggingSkillCoroutine == null)
@@ -99,9 +85,9 @@ public class Poseidon_Preset : MonoBehaviour
         {
             SamePresetSlotInit(selectedSkillId);
             PresetTargetImageInit();
+            GetRiggingSkillList();
             
             presetSkillList.GetChild(index).GetComponent<Poseidon_PresetSlot>().RiggngSkillInPresetSlot(selectedSkillId);
-            GetRiggingSkillList();
             riggingCheck = false;
 
             OnPresetSlotBtnAct?.Invoke(this, new OnPresetSlotBtnActEventArgs
@@ -141,11 +127,10 @@ public class Poseidon_Preset : MonoBehaviour
     private void GetRiggingSkillList()
     {
         riggingSkillList = new List<int>();
-        for(int i = 0; i < presetSkillList.childCount; i++)
+        for(int i = 0; i < transform.childCount; i++)
         {
             if(presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().id > 0)
             {
-
                 riggingSkillList.Add(presetSkillList.GetChild(i).GetComponent<Poseidon_PresetSlot>().id);
             }
         }

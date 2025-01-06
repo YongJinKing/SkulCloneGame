@@ -1,146 +1,146 @@
 [
-   {
-      "identity_index":100000,
-      "identity_name":"javelin",
-      "identity1_desc":"9개의 창을 부채꼴로 발사",
-      "identity2_desc":"12개의 창을 일렬로 발사"
-   },
-   {
-      "identity_index":100001,
-      "identity_name":"heist",
-      "identity1_desc":"이동속도 20%로 증가",
-      "identity2_desc":"공격속도 20%로 증가"
-   },
-   {
-      "identity_index":100002,
-      "identity_name":"rush",
-      "identity1_desc":"돌진 횟수 8회로 증가",
-      "identity2_desc":"쿨타임 1초로 감소\n돌진 횟수 1회"
-   },
-   {
-      "identity_index":100003,
-      "identity_name":"destroyedShark",
-      "identity1_desc":"파괴 상어의 이동속도 증가",
-      "identity2_desc":"파괴 상어의 공격속도 증가"
-   },
-   {
-      "identity_index":110000,
-      "identity_name":"wave",
-      "identity1_desc":"크기 증가",
-      "identity2_desc":"파도 2개로 증가\n크기 감소"
-   },
-   {
-      "identity_index":110001,
-      "identity_name":"wephonMastery",
-      "identity1_desc":"기본 공격 범위 50% 증가",
-      "identity2_desc":"기본 공격 데미지 150% 증가\n기본 공격 범위 20% 감소"
-   },
-   {
-      "identity_index":110002,
-      "identity_name":"tornado",
-      "identity1_desc":"2개의 토네이도가 캐릭터 주변 랜덤 위치에 생성",
-      "identity2_desc":"타격 횟수 30% 증가"
-   },
-   {
-      "identity_index":110003,
-      "identity_name":"sawShark",
-      "identity1_desc":"톱 상어 수 3마리로 증가",
-      "identity2_desc":"톱 상어의 이동속도와 회전속도 증가"
-   },
-   {
-      "identity_index":120000,
-      "identity_name":"iceBall",
-      "identity1_desc":"크기 증가",
-      "identity2_desc":"빙결 지속 시간 5초로 증가\n크기 감소"
-   },
-   {
-      "identity_index":120001,
-      "identity_name":"waterSlash",
-      "identity1_desc":"크기 증가",
-      "identity2_desc":"2발 발사\n크기 감소"
-   },
-   {
-      "identity_index":120002,
-      "identity_name":"boomFish",
-      "identity1_desc":"폭발 범위 증가",
-      "identity2_desc":"붐 피쉬 10마리로 증가"
-   },
-   {
-      "identity_index":120003,
-      "identity_name":"inkOctopus",
-      "identity1_desc":"먹물 범위 증가",
-      "identity2_desc":"지속 시간 5초로 증가"
-   },
-   {
-      "identity_index":130000,
-      "identity_name":"spinningSpear",
-      "identity1_desc":"범위 50% 증가",
-      "identity2_desc":"타격 횟수 50% 증가"
-   },
-   {
-      "identity_index":130001,
-      "identity_name":"bubbleBubble",
-      "identity1_desc":"경험치 구슬 2개로 드랍",
-      "identity2_desc":"골드 구슬 2개로 드랍"
-   },
-   {
-      "identity_index":130002,
-      "identity_name":"hungryShark",
-      "identity1_desc":"범위 60% 증가",
-      "identity2_desc":"지속 시간 5초로 증가"
-   },
-   {
-      "identity_index":130003,
-      "identity_name":"seaUrchin",
-      "identity1_desc":"가시 발사 개수 12개로 증가",
-      "identity2_desc":"6개의 가시를 한 방향으로 발사\n공격속도 50% 증가"
-   },
-   {
-      "identity_index":140000,
-      "identity_name":"cloneTechnique",
-      "identity1_desc":"분신 15개로 증가\n공격 범위 증가",
-      "identity2_desc":"공격 10회로 증가"
-   },
-   {
-      "identity_index":140001,
-      "identity_name":"increaseDropRate",
-      "identity1_desc":"장비 구슬 2개 드랍",
-      "identity2_desc":"진주 구슬 2개 드랍"
-   },
-   {
-      "identity_index":140002,
-      "identity_name":"Blizzard",
-      "identity1_desc":"블리자드 범위 증가\n지속 시간 4.5초로 증가\n블리자드 90개로 증가",
-      "identity2_desc":"블리자드 범위 감소\n지속 시간 2.5초로 감소\n블리자드 90개로 증가"
-   },
-   {
-      "identity_index":140003,
-      "identity_name":"electricEel",
-      "identity1_desc":"범위 증가",
-      "identity2_desc":"공격이 플레이어에게도 발생"
-   },
-   {
-      "identity_index":150000,
-      "identity_name":"wrathOfPoseidon",
-      "identity1_desc":"공격 횟수 4회로 증가",
-      "identity2_desc":"쿨타임 10초로 감소\n공격 횟수 1회로 감소\n데미지 2배로 증가\n카운터 가능"
-   },
-   {
-      "identity_index":150001,
-      "identity_name":"skillMastery",
-      "identity1_desc":"스킬 또는 소환수로 처치한 적이 전리품 폭발을 일으킬 확률 2%(전리품 폭발 : 골드, 경험치 구슬, 48.5%, 진주 구슬 3%의 확률로 총 20개 드랍)",
-      "identity2_desc":"기본 공격 시 쿨 타임 즉시 0.1초 감소\n소환수 공격 속도 10% 증가"
-   },
-   {
-      "identity_index":150002,
-      "identity_name":"columnOfWater",
-      "identity1_desc":"작은 물기둥이 양쪽으로 7개 생성\n지속 시간 : 4초",
-      "identity2_desc":"거대한 물기둥과 작은 물기둥 2개 생성"
-   },
-   {
-      "identity_index":150003,
-      "identity_name":"waterDragon",
-      "identity1_desc":"범위 증가",
-      "identity2_desc":"공격 횟수 2회로 증가\n범위 감소"
-   }
+  {
+    "identity_index": 100000,
+    "identity_name": "javelin",
+    "identity1_desc": "9개의 창을 부채꼴로 발사",
+    "identity2_desc": "12개의 창을 일렬로 발사"
+  },
+  {
+    "identity_index": 100001,
+    "identity_name": "heist",
+    "identity1_desc": "이동속도 20%로 증가",
+    "identity2_desc": "공격속도 20%로 증가"
+  },
+  {
+    "identity_index": 100002,
+    "identity_name": "rush",
+    "identity1_desc": "돌진 횟수 8회로 증가",
+    "identity2_desc": "쿨타임 1초로 감소\n돌진 횟수 1회"
+  },
+  {
+    "identity_index": 100003,
+    "identity_name": "destroyedShark",
+    "identity1_desc": "파괴 상어의 이동속도 증가",
+    "identity2_desc": "파괴 상어의 공격속도 증가"
+  },
+  {
+    "identity_index": 110000,
+    "identity_name": "wave",
+    "identity1_desc": "크기 증가",
+    "identity2_desc": "파도 2개로 증가\n크기 감소"
+  },
+  {
+    "identity_index": 110001,
+    "identity_name": "wephonMastery",
+    "identity1_desc": "기본 공격 범위 50% 증가",
+    "identity2_desc": "기본 공격 데미지 150% 증가\n기본 공격 범위 20% 감소"
+  },
+  {
+    "identity_index": 110002,
+    "identity_name": "tornado",
+    "identity1_desc": "2개의 토네이도가 캐릭터 주변 랜덤 위치에 생성",
+    "identity2_desc": "타격 횟수 30% 증가"
+  },
+  {
+    "identity_index": 110003,
+    "identity_name": "sawShark",
+    "identity1_desc": "톱 상어 수 3마리로 증가",
+    "identity2_desc": "톱 상어의 이동속도와 회전속도 증가"
+  },
+  {
+    "identity_index": 120000,
+    "identity_name": "iceBall",
+    "identity1_desc": "크기 증가",
+    "identity2_desc": "빙결 지속 시간 5초로 증가\n크기 감소"
+  },
+  {
+    "identity_index": 120001,
+    "identity_name": "waterSlash",
+    "identity1_desc": "크기 증가",
+    "identity2_desc": "2발 발사\n크기 감소"
+  },
+  {
+    "identity_index": 120002,
+    "identity_name": "boomFish",
+    "identity1_desc": "폭발 범위 증가",
+    "identity2_desc": "붐 피쉬 10마리로 증가"
+  },
+  {
+    "identity_index": 120003,
+    "identity_name": "inkOctopus",
+    "identity1_desc": "먹물 범위 증가",
+    "identity2_desc": "지속 시간 5초로 증가"
+  },
+  {
+    "identity_index": 130000,
+    "identity_name": "spinningSpear",
+    "identity1_desc": "범위 50% 증가",
+    "identity2_desc": "타격 횟수 50% 증가"
+  },
+  {
+    "identity_index": 130001,
+    "identity_name": "bubbleBubble",
+    "identity1_desc": "경험치 구슬 2개로 드랍",
+    "identity2_desc": "골드 구슬 2개로 드랍"
+  },
+  {
+    "identity_index": 130002,
+    "identity_name": "hungryShark",
+    "identity1_desc": "범위 60% 증가",
+    "identity2_desc": "지속 시간 5초로 증가"
+  },
+  {
+    "identity_index": 130003,
+    "identity_name": "seaUrchin",
+    "identity1_desc": "가시 발사 개수 12개로 증가",
+    "identity2_desc": "6개의 가시를 한 방향으로 발사\n공격속도 50% 증가"
+  },
+  {
+    "identity_index": 140000,
+    "identity_name": "cloneTechnique",
+    "identity1_desc": "분신 15개로 증가\n공격 범위 증가",
+    "identity2_desc": "공격 10회로 증가"
+  },
+  {
+    "identity_index": 140001,
+    "identity_name": "increaseDropRate",
+    "identity1_desc": "장비 구슬 2개 드랍",
+    "identity2_desc": "진주 구슬 2개 드랍"
+  },
+  {
+    "identity_index": 140002,
+    "identity_name": "Blizzard",
+    "identity1_desc": "블리자드 범위 증가\n지속 시간 4.5초로 증가\n블리자드 90개로 증가",
+    "identity2_desc": "블리자드 범위 감소\n지속 시간 2.5초로 감소\n블리자드 90개로 증가"
+  },
+  {
+    "identity_index": 140003,
+    "identity_name": "electricEel",
+    "identity1_desc": "범위 증가",
+    "identity2_desc": "공격이 플레이어에게도 발생"
+  },
+  {
+    "identity_index": 150000,
+    "identity_name": "wrathOfPoseidon",
+    "identity1_desc": "공격 횟수 4회로 증가",
+    "identity2_desc": "쿨타임 10초로 감소, 공격 횟수 1회로 감소\n데미지 2배로 증가, 카운터 가능"
+  },
+  {
+    "identity_index": 150001,
+    "identity_name": "skillMastery",
+    "identity1_desc": "스킬 또는 소환수로 처치한 적이 전리품 폭발을 일으킬 확률 2%(전리품 폭발 : 골드, 경험치 구슬, 48.5%, 진주 구슬 3%의 확률로 총 20개 드랍)",
+    "identity2_desc": "기본 공격 시 쿨 타임 즉시 0.1초 감소\n소환수 공격 속도 10% 증가"
+  },
+  {
+    "identity_index": 150002,
+    "identity_name": "columnOfWater",
+    "identity1_desc": "작은 물기둥이 양쪽으로 7개 생성\n지속 시간 : 4초",
+    "identity2_desc": "거대한 물기둥과 작은 물기둥 2개 생성"
+  },
+  {
+    "identity_index": 150003,
+    "identity_name": "waterDragon",
+    "identity1_desc": "범위 증가",
+    "identity2_desc": "공격 횟수 2회로 증가\n범위 감소"
+  }
 ]

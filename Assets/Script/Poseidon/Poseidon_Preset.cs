@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Poseidon_Preset : MonoBehaviour
 {
-    [SerializeField] private Poseidon_SkillExplain poseidon_SkillExplain;
+    [SerializeField] private PoseidonSkillExplain poseidon_SkillExplain;
     private Transform presetSkillList;
     private Poseidon_PresetSlot[] poseidon_presetSlot;
     private Button[] presetsBtn;
@@ -44,7 +44,7 @@ public class Poseidon_Preset : MonoBehaviour
 
     
 
-    private void OnRiggingSkill_SkillExplain(object sender, Poseidon_SkillExplain.OnRiggingSkillActEventArgs e)
+    private void OnRiggingSkill_SkillExplain(object sender, PoseidonSkillExplain.OnRiggingSkillActEventArgs e)
     {
         selectedSkillId = e.riggingSkillId;
         riggingCheck = e.isRigging;

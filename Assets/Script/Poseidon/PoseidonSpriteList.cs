@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Poseidon_SpriteList : MonoBehaviour
+public class PoseidonSpriteList : MonoBehaviour
 {
-    public static Poseidon_SpriteList instance;
+    public static PoseidonSpriteList instance;
     private class Sprite_Data
     {
         public int sprite_index;

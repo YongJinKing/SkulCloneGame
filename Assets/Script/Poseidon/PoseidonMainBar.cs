@@ -5,8 +5,6 @@ using UnityEngine;
 public class PoseidonMainBar : MonoBehaviour
 {
     #region prefab
-
-    [SerializeField] private Transform skillSlot;
     #endregion
     #region variable
     private Transform mainBarDetail;

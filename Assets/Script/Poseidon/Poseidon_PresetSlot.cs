@@ -36,7 +36,7 @@ public class Poseidon_PresetSlot : MonoBehaviour
         }
         else
         {
-            transform.GetChild(0).GetComponent<Image>().sprite = Poseidon_SpriteList.instance.GetSprite(id);          
+            transform.GetChild(0).GetComponent<Image>().sprite = PoseidonSpriteList.instance.GetSprite(id);          
         }
 
     }

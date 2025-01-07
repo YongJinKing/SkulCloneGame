@@ -11,7 +11,7 @@ public class PoseidonIdentity : MonoBehaviour
     [SerializeField] private TMP_Text identity1Desc;
     [SerializeField] private TMP_Text identity2Desc;
 
-    private class IdentityData
+    /* private class IdentityData
     {
         public int identity_index;
         public bool identity1_selected;
@@ -25,7 +25,7 @@ public class PoseidonIdentity : MonoBehaviour
         }
     }
     
-    private Dictionary<int, IdentityData> dic_identityData = new Dictionary<int, IdentityData>();
+    private Dictionary<int, IdentityData> dic_identityData = new Dictionary<int, IdentityData>(); */
     
     private Button[] identityButtons;
     
@@ -73,6 +73,9 @@ public class PoseidonIdentity : MonoBehaviour
     }
     private void IdentityBtnAct(int index)
     {
-
+        if(index == 0)
+        {
+            
+        }
     }
 }

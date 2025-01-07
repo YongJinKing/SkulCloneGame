@@ -16,6 +16,7 @@ public class PoseidonSkillSlot : MonoBehaviour
     public string infoData{get; private set;}
     public string identity1Desc{get; private set;}
     public string identity2Desc{get; private set;}
+    public string identityDisplay{get; private set;}
     
 
     
@@ -38,14 +39,15 @@ public class PoseidonSkillSlot : MonoBehaviour
         skill_name = instance.dicSkill_stringTable[id].skill_name;
         skill_desc = instance.dicSkill_stringTable[id].skill_desc;
         identity1Desc = instance.dicSkill_identityTable[instance.dicSkill_dataTable[id].skill_identityAffectIdx].identity1_desc;
-        identity2Desc = instance.dicSkill_identityTable[instance.dicSkill_dataTable[id].skill_identityAffectIdx].identity2_desc; 
+        identity2Desc = instance.dicSkill_identityTable[instance.dicSkill_dataTable[id].skill_identityAffectIdx].identity2_desc;
+        identityDisplay = null;
         
         InitSKillInformation();
         transform.GetChild(0).GetComponent<Image>().sprite = sprite;
     }
-    public void riggingStatus()
+    public void riggingStatus(bool value)
     {
-        isRigging = !isRigging;
+        isRigging = value;
         riggingText.gameObject.SetActive(isRigging);  
     }
     
@@ -78,6 +80,10 @@ public class PoseidonSkillSlot : MonoBehaviour
         {
             infoData += "쿨 타임 : " + instance.dicSkill_dataTable[id].skill_damage;
         }
+    }
+    private void SetIdentity()
+    {
+        
     }
    
     

@@ -33,6 +33,7 @@ public class PoseidonSkillList : MonoBehaviour
     {
         
         poseidonInstance  = PoseidonSkillStaticDataManager.GetInstance();
+        PoseidonPreset.instance.OnPresetSlotBtnAct += OnPresetSlotBtnAct_PoseidonPreset;
         Init();
     }
     private void Init()
@@ -69,6 +70,25 @@ public class PoseidonSkillList : MonoBehaviour
             poseidonSkillSlot = poseidonSkillSlots[index],
         });
     }
+    private void OnPresetSlotBtnAct_PoseidonPreset(object sender, PoseidonPreset.OnPresetSlotBtnActEventArgs e)
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<PoseidonSkillSlot>().riggingStatus(false);
+        }
+        for(int i = 0; i < e.riggingSkillList.Count; i++)
+        {
+            for(int j = 0; j < transform.childCount; j++)
+            {
+                if(e.riggingSkillList[i] == transform.GetChild(j).GetComponent<PoseidonSkillSlot>().id)
+                {
+                    transform.GetChild(j).GetComponent<PoseidonSkillSlot>().riggingStatus(true);
+                    break;
+                }
+            }
+        }
+    }
+    
     
 
 

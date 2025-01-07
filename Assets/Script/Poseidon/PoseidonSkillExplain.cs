@@ -34,8 +34,8 @@ public class PoseidonSkillExplain : MonoBehaviour
     private void Start() 
     {
         
-        PoseidonSkillList.instance.OnSkillListBtnAct += SkillList_OnChanged;
-        
+        PoseidonSkillList.instance.OnSkillListBtnAct += OnSkillListBtnAct_PoseidonSkillList;
+        PoseidonPreset.instance.OnPresetSlotBtnAct += OnPresetSlotBtnAct_PoseidonPreset;
 
         image = transform.GetChild(0).GetComponent<Image>();
         skillName = transform.GetChild(1).GetComponent<TMP_Text>();
@@ -50,7 +50,7 @@ public class PoseidonSkillExplain : MonoBehaviour
     }
 
 
-    private void SkillList_OnChanged(object sender, PoseidonSkillList.OnSkillListBtnActEventArgs e)//스킬리스트에서 선택한 스킬 바꾸기
+    private void OnSkillListBtnAct_PoseidonSkillList(object sender, PoseidonSkillList.OnSkillListBtnActEventArgs e)//스킬리스트에서 선택한 스킬 바꾸기
     {
         
         image.sprite = e.poseidonSkillSlot.sprite;
@@ -59,11 +59,13 @@ public class PoseidonSkillExplain : MonoBehaviour
         skillDesc.text = e.poseidonSkillSlot.skill_desc;
         isRigging = false;
         ChangeRiggingBtnText();
-        
-
-        
-        
     }
+    private void OnPresetSlotBtnAct_PoseidonPreset(object sender, PoseidonPreset.OnPresetSlotBtnActEventArgs e)
+    {
+        isRigging = false;
+        ChangeRiggingBtnText();
+    }
+
     
 
     private void OnRiggingBtnAct()

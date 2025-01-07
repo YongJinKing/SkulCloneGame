@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-public class Poseidon_PresetSlot : MonoBehaviour
+public class PoseidonPresetSlot : MonoBehaviour
 {
     [SerializeField] private Sprite slotImage;
     public bool isChange{get; private set;}
